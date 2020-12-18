@@ -8,32 +8,12 @@
 #remotes::install_github('cttobin/ggthemr')
 
 ## Clean data
-source('r/dm_combine_data.R')
-source('r/dm_local_lockdowns.R')
-source('r/dm_rule_of_six.R')
-source('r/dm_10pm_WFH.R')
-source('r/dm_10pm.R')
-source('r/dm_WFH.R')
+source('r/an_tests.R')
+source('r/an_test_age.R')
 
-## Run analyses
-set.seed(700)
+source('r/fig_geo_maps.R')
+source('r/fig_nat_res_tests.R')
+source('r/fig_nat_tiers.R')
+source('r/table_combine_summary.R')
+source('r/table_res_chars.R')
 
-par(mfrow = c(2,1))
-source('r/an_local_lockdowns.R')
-source('r/an_local_lockdowns_sens.R')
-par(mfrow = c(3,1))
-source('r/an_rule_of_six.R')
-source('r/an_10pm.R')
-source('r/an_WFH.R')
-
-# Create tables
-## Table 1
-source('r/tab_restrictions_characteristics.R')
-## Table 2
-source('r/tab_combine_summary.R')
-## Table 3
-source('r/tab_signchange_characteristics.R')
-
-# Create Figure
-source('r/Figure_1.R')
-source('r/Figure_S1.R')
